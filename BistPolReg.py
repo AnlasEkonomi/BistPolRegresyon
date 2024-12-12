@@ -6,7 +6,7 @@ from sklearn.metrics import r2_score
 
 veri=yf.download("XU100.IS",start="2020-07-27",interval="1wk")["Adj Close"]
 veri=pd.DataFrame(veri)
-veri.rename(columns={"Adj Close":"Fiyat"},inplace=True)
+veri.rename(columns={"XU100.IS":"Fiyat"},inplace=True)
 
 x=np.arange(len(veri["Fiyat"]))
 y=veri["Fiyat"]
